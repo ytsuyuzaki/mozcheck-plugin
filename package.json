@@ -54,9 +54,10 @@
 		"test:integration": "wp-env run tests-cli --env-cwd='wp-content/plugins/mozcheck-plugin/' vendor/bin/phpunit --configuration phpunit.xml.dist",
 		"test:e2e": "wp-scripts test-playwright",
 		"test:package": "node scripts/validate-package.mjs dist/mozcheck.zip",
-		"wp-env:start": "wp-env start",
-		"wp-env:stop": "wp-env stop",
+		"wp-env:start": "node scripts/wp-env-mailpit.mjs start",
+		"wp-env:stop": "node scripts/wp-env-mailpit.mjs stop",
 		"wp-env:destroy": "wp-env destroy",
+		"wp-env:mail:send": "node scripts/wp-env-mailpit.mjs send",
 		"build:zip": "wp-scripts plugin-zip && node scripts/move-package.mjs && npm run test:package",
 		"validate:release": "node scripts/validate-release.mjs"
 	}

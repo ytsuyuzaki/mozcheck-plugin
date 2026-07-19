@@ -1,6 +1,9 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/wp-env.json",
 	"plugins": [ "." ],
+	"mappings": {
+		"wp-content/mu-plugins/mozcheck-mailpit.php": "./wp-env/mailpit.php"
+	},
 	"config": {
 		"WP_DEBUG": true,
 		"SCRIPT_DEBUG": true

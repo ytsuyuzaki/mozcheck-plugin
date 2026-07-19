@@ -49,6 +49,26 @@ npm run build:zip         # dist/mozcheck.zip の作成と検証
 npm run wp-env:stop
 ```
 
+## メール内容の確認
+
+`npm run wp-env:start`は、WordPressと同時に開発用メール受信サーバーの
+[Mailpit](https://mailpit.axllent.org/)を起動します。
+
+- WordPress: <http://localhost:8888>
+- Mailpit: <http://localhost:8025>
+- WordPressログイン: `admin` / `password`
+
+「設定 → MozCheck」の「今すぐ診断してメール送信」を実行し、Mailpitを開くと
+実際のHTMLメール、ヘッダー、宛先を確認できます。コマンドだけでプレビューを
+作成する場合は次を実行します。
+
+```sh
+npm run wp-env:mail:send
+```
+
+MailpitのメールはDocker volumeに保存されるため、`wp-env:stop`後も残ります。
+このSMTP設定は`wp-env`専用のmu-pluginであり、配布ZIPには含まれません。
+
 ## リリース
 
 `package.json`、`mozcheck.php`、`readme.txt` のバージョンを揃え、
