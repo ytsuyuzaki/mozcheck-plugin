@@ -8,6 +8,31 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Domain: mozcheck\n"
 
+msgctxt "Site Health tab label"
+msgid "MozCheck"
+msgstr "MozCheck"
+
+msgid "MozCheck email notifications"
+msgstr "MozCheckメール通知"
+
+msgid "MozCheck emails a readable summary of Site Health issues, updates, and items that may no longer be needed."
+msgstr "MozCheckはサイトヘルスの問題、更新、不要と思われる項目を読みやすくまとめてメールします。"
+
+msgid "Notification status:"
+msgstr "通知状態:"
+
+msgid "Enabled"
+msgstr "有効"
+
+msgid "Disabled"
+msgstr "無効"
+
+msgid "Next scheduled check:"
+msgstr "次回の定期診断:"
+
+msgid "Open MozCheck settings"
+msgstr "MozCheck設定を開く"
+
 msgid "Mozcheck plugin."
 msgstr "MozCheckプラグイン。"
 

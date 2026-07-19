@@ -85,6 +85,20 @@ class PluginIntegrationTest extends WP_UnitTestCase {
 	}
 
 	/**
+	 * Site Health exposes a MozCheck tab with a settings link.
+	 */
+	public function test_site_health_tab_links_to_settings(): void {
+		$tabs = Mozcheck_Admin::site_health_tab( array() );
+		$this->assertArrayHasKey( 'mozcheck', $tabs );
+
+		ob_start();
+		Mozcheck_Admin::site_health_tab_content( 'mozcheck' );
+		$content = (string) ob_get_clean();
+		$this->assertStringContainsString( 'options-general.php?page=mozcheck', $content );
+		$this->assertStringContainsString( 'Open MozCheck settings', $content );
+	}
+
+	/**
 	 * Collector includes tests registered through the public Site Health filter.
 	 */
 	public function test_collector_runs_plugin_site_health_tests(): void {

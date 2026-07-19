@@ -17,6 +17,43 @@ final class Mozcheck_Admin {
 		add_action( 'admin_init', array( __CLASS__, 'register_settings' ) );
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue' ) );
 		add_action( 'admin_post_mozcheck_send_now', array( __CLASS__, 'send_now' ) );
+		add_filter( 'site_health_navigation_tabs', array( __CLASS__, 'site_health_tab' ) );
+		add_action( 'site_health_tab_content', array( __CLASS__, 'site_health_tab_content' ) );
+	}
+
+	/**
+	 * Add MozCheck to the Site Health tab navigation.
+	 *
+	 * @param array<string, string> $tabs Existing custom tabs.
+	 * @return array<string, string>
+	 */
+	public static function site_health_tab( array $tabs ): array {
+		$tabs['mozcheck'] = esc_html_x( 'MozCheck', 'Site Health tab label', 'mozcheck' );
+		return $tabs;
+	}
+
+	/**
+	 * Render the MozCheck Site Health tab.
+	 *
+	 * @param string $tab Requested tab slug.
+	 */
+	public static function site_health_tab_content( string $tab ): void {
+		if ( 'mozcheck' !== $tab ) {
+			return;
+		}
+		$settings = Mozcheck_Settings::get();
+		$next     = wp_next_scheduled( Mozcheck_Scheduler::HOOK );
+		?>
+		<div class="health-check-body health-check-status-tab">
+			<h2><?php esc_html_e( 'MozCheck email notifications', 'mozcheck' ); ?></h2>
+			<p><?php esc_html_e( 'MozCheck emails a readable summary of Site Health issues, updates, and items that may no longer be needed.', 'mozcheck' ); ?></p>
+			<p><strong><?php esc_html_e( 'Notification status:', 'mozcheck' ); ?></strong> <?php echo esc_html( $settings['enabled'] ? __( 'Enabled', 'mozcheck' ) : __( 'Disabled', 'mozcheck' ) ); ?></p>
+			<?php if ( $next ) : ?>
+				<p><strong><?php esc_html_e( 'Next scheduled check:', 'mozcheck' ); ?></strong> <?php echo esc_html( wp_date( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $next ) ); ?></p>
+			<?php endif; ?>
+			<p><a class="button button-primary" href="<?php echo esc_url( admin_url( 'options-general.php?page=mozcheck' ) ); ?>"><?php esc_html_e( 'Open MozCheck settings', 'mozcheck' ); ?></a></p>
+		</div>
+		<?php
 	}
 
 	/**

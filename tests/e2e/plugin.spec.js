@@ -29,3 +29,18 @@ test( 'Mozcheck settings expose the report controls', async ( { page } ) => {
 		} )
 	).toBeVisible();
 } );
+
+test( 'Site Health includes a MozCheck settings tab', async ( { page } ) => {
+	await page.goto( '/wp-admin/site-health.php' );
+	await page
+		.getByLabel( 'Secondary menu' )
+		.getByRole( 'link', { name: 'MozCheck' } )
+		.click();
+
+	await expect( page ).toHaveURL( /site-health\.php\?tab=mozcheck/ );
+	await expect(
+		page.getByRole( 'heading', { name: 'MozCheck email notifications' } )
+	).toBeVisible();
+	await page.getByRole( 'link', { name: 'Open MozCheck settings' } ).click();
+	await expect( page ).toHaveURL( /options-general\.php\?page=mozcheck/ );
+} );

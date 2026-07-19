@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-07-19T07:05:08+00:00\n"
+"POT-Creation-Date: 2026-07-19T08:12:45+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: mozcheck\n"
@@ -34,175 +34,208 @@ msgstr ""
 msgid "ytsuyuzaki"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:38
+#: includes/class-mozcheck-admin.php:31
+msgctxt "Site Health tab label"
 msgid "MozCheck"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:61
+#: includes/class-mozcheck-admin.php:48
+msgid "MozCheck email notifications"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:49
+msgid "MozCheck emails a readable summary of Site Health issues, updates, and items that may no longer be needed."
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:50
+msgid "Notification status:"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:50
+msgid "Enabled"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:50
+msgid "Disabled"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:52
+msgid "Next scheduled check:"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:54
+msgid "Open MozCheck settings"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:75
+msgid "MozCheck"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:98
 msgid "You are not allowed to perform this action."
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:82
+#: includes/class-mozcheck-admin.php:119
 msgid "Monday"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:83
+#: includes/class-mozcheck-admin.php:120
 msgid "Tuesday"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:84
+#: includes/class-mozcheck-admin.php:121
 msgid "Wednesday"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:85
+#: includes/class-mozcheck-admin.php:122
 msgid "Thursday"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:86
+#: includes/class-mozcheck-admin.php:123
 msgid "Friday"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:87
+#: includes/class-mozcheck-admin.php:124
 msgid "Saturday"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:88
+#: includes/class-mozcheck-admin.php:125
 msgid "Sunday"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:91
+#: includes/class-mozcheck-admin.php:128
 msgid "Always send a report"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:92
+#: includes/class-mozcheck-admin.php:129
 msgid "When there is a critical or recommended item"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:93
+#: includes/class-mozcheck-admin.php:130
 msgid "When there is at least one critical item"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:94
+#: includes/class-mozcheck-admin.php:131
 msgid "When an update is available"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:95
+#: includes/class-mozcheck-admin.php:132
 msgid "When the result is worse than the previous scheduled check"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:96
-#: includes/class-mozcheck-admin.php:127
+#: includes/class-mozcheck-admin.php:133
+#: includes/class-mozcheck-admin.php:164
 msgid "Custom conditions"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:100
+#: includes/class-mozcheck-admin.php:137
 msgid "MozCheck Site Health email"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:101
+#: includes/class-mozcheck-admin.php:138
 msgid "Receive a readable reminder of WordPress Site Health results. WP-Cron runs when the site receives traffic, so delivery may be later than the selected time."
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:104
+#: includes/class-mozcheck-admin.php:141
 msgid "The report email was sent."
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:104
+#: includes/class-mozcheck-admin.php:141
 msgid "The report could not be sent to every recipient."
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:109
+#: includes/class-mozcheck-admin.php:146
 msgid "Email notifications"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:109
+#: includes/class-mozcheck-admin.php:146
 msgid "Enable scheduled email notifications"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:110
+#: includes/class-mozcheck-admin.php:147
 msgid "Recipients"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:110
+#: includes/class-mozcheck-admin.php:147
 msgid "Enter one address per line or separate addresses with commas. Each recipient receives a separate email."
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:111
+#: includes/class-mozcheck-admin.php:148
 msgid "Schedule"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:112
+#: includes/class-mozcheck-admin.php:149
 msgid "Weekly"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:112
+#: includes/class-mozcheck-admin.php:149
 msgid "Monthly"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:113
+#: includes/class-mozcheck-admin.php:150
 msgid "Weekday"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:118
+#: includes/class-mozcheck-admin.php:155
 msgid "Day of month"
 msgstr ""
 
 #. translators: %s: site timezone.
-#: includes/class-mozcheck-admin.php:120
+#: includes/class-mozcheck-admin.php:157
 #, php-format
 msgid "Times use the site timezone: %s. Monthly dates are limited to 1–28."
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:122
+#: includes/class-mozcheck-admin.php:159
 msgid "Send when"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:128
+#: includes/class-mozcheck-admin.php:165
 msgid "Critical count is at least"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:129
+#: includes/class-mozcheck-admin.php:166
 msgid "Recommended count is at least"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:130
+#: includes/class-mozcheck-admin.php:167
 msgid "An update is available"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:131
+#: includes/class-mozcheck-admin.php:168
 msgid "Critical or recommended count increased"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:132
+#: includes/class-mozcheck-admin.php:169
 msgid "Custom conditions are combined with OR: matching any selected condition sends the email."
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:135
+#: includes/class-mozcheck-admin.php:172
 msgid "Report categories"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:144
+#: includes/class-mozcheck-admin.php:181
 msgid "Report status"
 msgstr ""
 
 #. translators: %s: next check date and time.
-#: includes/class-mozcheck-admin.php:145
+#: includes/class-mozcheck-admin.php:182
 #, php-format
 msgid "Next scheduled check: %s"
 msgstr ""
 
 #. translators: %s: next check date and time.
-#: includes/class-mozcheck-admin.php:145
+#: includes/class-mozcheck-admin.php:182
 msgid "No report is scheduled."
 msgstr ""
 
 #. translators: 1: last check date and time, 2: delivery status.
-#: includes/class-mozcheck-admin.php:149
+#: includes/class-mozcheck-admin.php:186
 #, php-format
 msgid "Last check: %1$s — delivery status: %2$s"
 msgstr ""
 
-#: includes/class-mozcheck-admin.php:153
+#: includes/class-mozcheck-admin.php:190
 msgid "Run diagnosis and send email now"
 msgstr ""
 
@@ -218,81 +251,84 @@ msgstr ""
 msgid "[MozCheck] %1$s: %2$d critical, %3$d recommended"
 msgstr ""
 
+#: includes/class-mozcheck-mailer.php:85
+#: includes/class-mozcheck-mailer.php:102
+msgid "Critical"
+msgstr ""
+
+#: includes/class-mozcheck-mailer.php:86
+#: includes/class-mozcheck-mailer.php:103
+msgid "Recommended"
+msgstr ""
+
+#: includes/class-mozcheck-mailer.php:87
+#: includes/class-mozcheck-mailer.php:104
+msgid "Good"
+msgstr ""
+
 #. translators: %s: site name.
-#: includes/class-mozcheck-mailer.php:93
+#: includes/class-mozcheck-mailer.php:98
 #, php-format
 msgid "Site Health report for %s"
 msgstr ""
 
-#: includes/class-mozcheck-mailer.php:97
-msgid "Critical"
-msgstr ""
-
-#: includes/class-mozcheck-mailer.php:98
-msgid "Recommended"
-msgstr ""
-
-#: includes/class-mozcheck-mailer.php:99
-msgid "Good"
-msgstr ""
-
-#: includes/class-mozcheck-mailer.php:103
+#: includes/class-mozcheck-mailer.php:108
 msgid "No problems were found in the selected categories."
 msgstr ""
 
-#: includes/class-mozcheck-mailer.php:105
+#: includes/class-mozcheck-mailer.php:110
 msgid "Items to review"
 msgstr ""
 
-#: includes/class-mozcheck-mailer.php:115
+#: includes/class-mozcheck-mailer.php:120
 msgid "Open Site Health"
 msgstr ""
 
-#: includes/class-mozcheck-mailer.php:117
+#: includes/class-mozcheck-mailer.php:122
 msgid "This email was sent by the MozCheck WordPress plugin."
 msgstr ""
 
-#: includes/class-mozcheck-settings.php:62
+#: includes/class-mozcheck-settings.php:63
 msgid "Updates"
 msgstr ""
 
-#: includes/class-mozcheck-settings.php:63
+#: includes/class-mozcheck-settings.php:64
 msgid "PHP and database"
 msgstr ""
 
-#: includes/class-mozcheck-settings.php:64
+#: includes/class-mozcheck-settings.php:65
 msgid "REST API"
 msgstr ""
 
-#: includes/class-mozcheck-settings.php:65
+#: includes/class-mozcheck-settings.php:66
 msgid "Loopback requests"
 msgstr ""
 
-#: includes/class-mozcheck-settings.php:66
+#: includes/class-mozcheck-settings.php:67
 msgid "HTTPS and SSL"
 msgstr ""
 
-#: includes/class-mozcheck-settings.php:67
+#: includes/class-mozcheck-settings.php:68
 msgid "Scheduled events"
 msgstr ""
 
-#: includes/class-mozcheck-settings.php:68
+#: includes/class-mozcheck-settings.php:69
 msgid "Unused plugins and themes"
 msgstr ""
 
-#: includes/class-mozcheck-settings.php:69
+#: includes/class-mozcheck-settings.php:70
 msgid "Other Site Health tests"
 msgstr ""
 
-#: includes/class-mozcheck-settings.php:103
+#: includes/class-mozcheck-settings.php:104
 msgid "Enter at least one valid email address."
 msgstr ""
 
-#: includes/class-mozcheck-settings.php:110
+#: includes/class-mozcheck-settings.php:111
 msgid "Select at least one report category."
 msgstr ""
 
-#: includes/class-mozcheck-settings.php:115
+#: includes/class-mozcheck-settings.php:116
 msgid "Select at least one custom notification condition."
 msgstr ""
 
