@@ -43,7 +43,7 @@ npm run lint              # PHP / JavaScript / Markdown / package.json
 npm run test:unit         # WordPress を起動しない PHPUnit
 npm run test:integration  # wp-env 内の WordPress + DB
 npm run test:e2e          # Playwright smoke test
-npm test                  # すべてのテスト
+npm test                  # unit / integration / E2Eテスト
 npm run build:zip         # dist/mozcheck.zip の作成と検証
 npm run wp-env:stop
 ```

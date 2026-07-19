@@ -38,7 +38,7 @@
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"lint:php": "vendor/bin/phpcs",
 		"format": "wp-scripts format",
-		"test": "npm run test:unit && npm run test:integration && npm run test:e2e && npm run test:package",
+		"test": "npm run test:unit && npm run test:integration && npm run test:e2e",
 		"test:unit": "composer test",
 		"test:integration": "wp-env run tests-cli --env-cwd='wp-content/plugins/mozcheck-plugin/' vendor/bin/phpunit --configuration phpunit.xml.dist",
 		"test:e2e": "wp-scripts test-playwright",

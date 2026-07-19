@@ -1,7 +1,14 @@
 import { resolve } from 'node:path';
+import { existsSync, statSync } from 'node:fs';
 import AdmZip from 'adm-zip';
 
 const archivePath = resolve( process.argv[ 2 ] ?? 'dist/mozcheck.zip' );
+if ( ! existsSync( archivePath ) || ! statSync( archivePath ).isFile() ) {
+	throw new Error(
+		`Release ZIP does not exist: ${ archivePath }. Run npm run build:zip first.`
+	);
+}
+
 const entries = new AdmZip( archivePath )
 	.getEntries()
 	.map( ( entry ) => entry.entryName );
