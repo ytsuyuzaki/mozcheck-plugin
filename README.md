@@ -40,6 +40,7 @@ npm run wp-env:start
 
 ```sh
 npm run lint              # PHP / JavaScript / Markdown / package.json
+npm run audit             # npm / Composer依存関係の脆弱性監査
 npm run test:unit         # WordPress を起動しない PHPUnit
 npm run test:integration  # wp-env 内の WordPress + DB
 npm run test:e2e          # Playwright smoke test
