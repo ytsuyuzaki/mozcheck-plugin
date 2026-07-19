@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset name="Mozcheck">
+	<description>WordPress Coding Standards for Mozcheck.</description>
+	<file>.</file>
+	<arg name="extensions" value="php"/>
+	<exclude-pattern>vendor/*</exclude-pattern>
+	<exclude-pattern>node_modules/*</exclude-pattern>
+	<exclude-pattern>dist/*</exclude-pattern>
+	<rule ref="WordPress"/>
+	<config name="minimum_wp_version" value="6.0"/>
+	<config name="text_domain" value="mozcheck"/>
+</ruleset>
+

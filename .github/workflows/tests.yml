@@ -1,0 +1,49 @@
+name: Tests
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+    workflow_dispatch:
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+        steps:
+            - uses: actions/checkout@v4
+            - uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '8.2'
+                  tools: composer
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: '22'
+                  cache: npm
+            - run: composer install --no-interaction --prefer-dist
+            - run: npm ci
+            - run: npx playwright install --with-deps chromium
+            - run: npm run lint
+            - run: npm run wp-env:start
+            - run: npm test
+            - if: always()
+              run: npm run wp-env:stop
+
+    package:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: read
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: '22'
+                  cache: npm
+            - run: npm ci
+            - run: npm run validate:release
+            - run: npm run build:zip
+            - uses: actions/upload-artifact@v4
+              with:
+                  name: mozcheck-plugin
+                  path: dist/mozcheck.zip

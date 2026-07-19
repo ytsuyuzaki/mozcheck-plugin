@@ -1,0 +1,10 @@
+node_modules/
+vendor/
+dist/
+.wp-env/
+artifacts/
+playwright-report/
+test-results/
+.phpunit.result.cache
+npm-debug.log*
+

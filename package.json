@@ -1,0 +1,48 @@
+{
+	"name": "mozcheck",
+	"version": "0.1.0",
+	"private": true,
+	"description": "WordPress plugin development scaffold",
+	"author": "ytsuyuzaki",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"wordpress",
+		"plugin"
+	],
+	"homepage": "https://github.com/ytsuyuzaki/mozcheck-plugin",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ytsuyuzaki/mozcheck-plugin.git"
+	},
+	"bugs": {
+		"url": "https://github.com/ytsuyuzaki/mozcheck-plugin/issues"
+	},
+	"files": [
+		"mozcheck.php",
+		"readme.txt"
+	],
+	"devDependencies": {
+		"@playwright/test": "^1.60.0",
+		"@wordpress/env": "^11.7.0",
+		"@wordpress/scripts": "^32.1.0",
+		"adm-zip": "^0.6.0"
+	},
+	"scripts": {
+		"lint": "npm run lint:js && npm run lint:md && npm run lint:pkg-json && npm run lint:php",
+		"lint:js": "wp-scripts lint-js",
+		"lint:md": "wp-scripts lint-md-docs",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"lint:php": "vendor/bin/phpcs",
+		"format": "wp-scripts format",
+		"test": "npm run test:unit && npm run test:integration && npm run test:e2e && npm run test:package",
+		"test:unit": "composer test",
+		"test:integration": "wp-env run tests-cli --env-cwd='wp-content/plugins/mozcheck-plugin/' vendor/bin/phpunit --configuration phpunit.xml.dist",
+		"test:e2e": "wp-scripts test-playwright",
+		"test:package": "node scripts/validate-package.mjs dist/mozcheck.zip",
+		"wp-env:start": "wp-env start",
+		"wp-env:stop": "wp-env stop",
+		"wp-env:destroy": "wp-env destroy",
+		"build:zip": "wp-scripts plugin-zip && node scripts/move-package.mjs && npm run test:package",
+		"validate:release": "node scripts/validate-release.mjs"
+	}
+}
