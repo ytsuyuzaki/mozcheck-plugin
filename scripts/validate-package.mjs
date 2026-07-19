@@ -5,7 +5,13 @@ const archivePath = resolve( process.argv[ 2 ] ?? 'dist/mozcheck.zip' );
 const entries = new AdmZip( archivePath )
 	.getEntries()
 	.map( ( entry ) => entry.entryName );
-const required = [ 'mozcheck/mozcheck.php', 'mozcheck/readme.txt' ];
+const required = [
+	'mozcheck/mozcheck.php',
+	'mozcheck/includes/class-mozcheck-plugin.php',
+	'mozcheck/languages/mozcheck.pot',
+	'mozcheck/uninstall.php',
+	'mozcheck/readme.txt',
+];
 
 for ( const path of required ) {
 	if ( ! entries.includes( path ) ) {

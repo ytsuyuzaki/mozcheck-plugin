@@ -1,0 +1,351 @@
+# Copyright (C) 2026 ytsuyuzaki
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mozcheck 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/mozcheck-plugin\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-07-19T07:05:08+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: mozcheck\n"
+
+#. Plugin Name of the plugin
+#: mozcheck.php
+msgid "Mozcheck"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: mozcheck.php
+msgid "https://github.com/ytsuyuzaki/mozcheck-plugin"
+msgstr ""
+
+#. Description of the plugin
+#: mozcheck.php
+msgid "Mozcheck plugin."
+msgstr ""
+
+#. Author of the plugin
+#: mozcheck.php
+msgid "ytsuyuzaki"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:38
+msgid "MozCheck"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:61
+msgid "You are not allowed to perform this action."
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:82
+msgid "Monday"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:83
+msgid "Tuesday"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:84
+msgid "Wednesday"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:85
+msgid "Thursday"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:86
+msgid "Friday"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:87
+msgid "Saturday"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:88
+msgid "Sunday"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:91
+msgid "Always send a report"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:92
+msgid "When there is a critical or recommended item"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:93
+msgid "When there is at least one critical item"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:94
+msgid "When an update is available"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:95
+msgid "When the result is worse than the previous scheduled check"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:96
+#: includes/class-mozcheck-admin.php:127
+msgid "Custom conditions"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:100
+msgid "MozCheck Site Health email"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:101
+msgid "Receive a readable reminder of WordPress Site Health results. WP-Cron runs when the site receives traffic, so delivery may be later than the selected time."
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:104
+msgid "The report email was sent."
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:104
+msgid "The report could not be sent to every recipient."
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:109
+msgid "Email notifications"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:109
+msgid "Enable scheduled email notifications"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:110
+msgid "Recipients"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:110
+msgid "Enter one address per line or separate addresses with commas. Each recipient receives a separate email."
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:111
+msgid "Schedule"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:112
+msgid "Weekly"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:112
+msgid "Monthly"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:113
+msgid "Weekday"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:118
+msgid "Day of month"
+msgstr ""
+
+#. translators: %s: site timezone.
+#: includes/class-mozcheck-admin.php:120
+#, php-format
+msgid "Times use the site timezone: %s. Monthly dates are limited to 1–28."
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:122
+msgid "Send when"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:128
+msgid "Critical count is at least"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:129
+msgid "Recommended count is at least"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:130
+msgid "An update is available"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:131
+msgid "Critical or recommended count increased"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:132
+msgid "Custom conditions are combined with OR: matching any selected condition sends the email."
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:135
+msgid "Report categories"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:144
+msgid "Report status"
+msgstr ""
+
+#. translators: %s: next check date and time.
+#: includes/class-mozcheck-admin.php:145
+#, php-format
+msgid "Next scheduled check: %s"
+msgstr ""
+
+#. translators: %s: next check date and time.
+#: includes/class-mozcheck-admin.php:145
+msgid "No report is scheduled."
+msgstr ""
+
+#. translators: 1: last check date and time, 2: delivery status.
+#: includes/class-mozcheck-admin.php:149
+#, php-format
+msgid "Last check: %1$s — delivery status: %2$s"
+msgstr ""
+
+#: includes/class-mozcheck-admin.php:153
+msgid "Run diagnosis and send email now"
+msgstr ""
+
+#. translators: %s: site name.
+#: includes/class-mozcheck-mailer.php:64
+#, php-format
+msgid "[MozCheck] %s: Site Health is good"
+msgstr ""
+
+#. translators: 1: site name, 2: critical count, 3: recommended count.
+#: includes/class-mozcheck-mailer.php:68
+#, php-format
+msgid "[MozCheck] %1$s: %2$d critical, %3$d recommended"
+msgstr ""
+
+#. translators: %s: site name.
+#: includes/class-mozcheck-mailer.php:93
+#, php-format
+msgid "Site Health report for %s"
+msgstr ""
+
+#: includes/class-mozcheck-mailer.php:97
+msgid "Critical"
+msgstr ""
+
+#: includes/class-mozcheck-mailer.php:98
+msgid "Recommended"
+msgstr ""
+
+#: includes/class-mozcheck-mailer.php:99
+msgid "Good"
+msgstr ""
+
+#: includes/class-mozcheck-mailer.php:103
+msgid "No problems were found in the selected categories."
+msgstr ""
+
+#: includes/class-mozcheck-mailer.php:105
+msgid "Items to review"
+msgstr ""
+
+#: includes/class-mozcheck-mailer.php:115
+msgid "Open Site Health"
+msgstr ""
+
+#: includes/class-mozcheck-mailer.php:117
+msgid "This email was sent by the MozCheck WordPress plugin."
+msgstr ""
+
+#: includes/class-mozcheck-settings.php:62
+msgid "Updates"
+msgstr ""
+
+#: includes/class-mozcheck-settings.php:63
+msgid "PHP and database"
+msgstr ""
+
+#: includes/class-mozcheck-settings.php:64
+msgid "REST API"
+msgstr ""
+
+#: includes/class-mozcheck-settings.php:65
+msgid "Loopback requests"
+msgstr ""
+
+#: includes/class-mozcheck-settings.php:66
+msgid "HTTPS and SSL"
+msgstr ""
+
+#: includes/class-mozcheck-settings.php:67
+msgid "Scheduled events"
+msgstr ""
+
+#: includes/class-mozcheck-settings.php:68
+msgid "Unused plugins and themes"
+msgstr ""
+
+#: includes/class-mozcheck-settings.php:69
+msgid "Other Site Health tests"
+msgstr ""
+
+#: includes/class-mozcheck-settings.php:103
+msgid "Enter at least one valid email address."
+msgstr ""
+
+#: includes/class-mozcheck-settings.php:110
+msgid "Select at least one report category."
+msgstr ""
+
+#: includes/class-mozcheck-settings.php:115
+msgid "Select at least one custom notification condition."
+msgstr ""
+
+#: includes/class-mozcheck-site-health-collector.php:135
+msgid "A Site Health test is unavailable"
+msgstr ""
+
+#: includes/class-mozcheck-site-health-collector.php:136
+msgid "WordPress could not complete this Site Health test during the scheduled check."
+msgstr ""
+
+#. translators: %s: available WordPress version.
+#: includes/class-mozcheck-site-health-collector.php:154
+#, php-format
+msgid "WordPress %s is available."
+msgstr ""
+
+#: includes/class-mozcheck-site-health-collector.php:155
+msgid "A WordPress update is available"
+msgstr ""
+
+#. translators: 1: plugin name, 2: available version.
+#. translators: 1: theme name, 2: available version.
+#: includes/class-mozcheck-site-health-collector.php:166
+#: includes/class-mozcheck-site-health-collector.php:175
+#, php-format
+msgid "%1$s can be updated to version %2$s."
+msgstr ""
+
+#: includes/class-mozcheck-site-health-collector.php:167
+msgid "A plugin update is available"
+msgstr ""
+
+#: includes/class-mozcheck-site-health-collector.php:176
+msgid "A theme update is available"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: includes/class-mozcheck-site-health-collector.php:182
+#, php-format
+msgid "%s is inactive. Remove it if it is no longer needed."
+msgstr ""
+
+#: includes/class-mozcheck-site-health-collector.php:183
+msgid "An inactive plugin is installed"
+msgstr ""
+
+#. translators: %s: theme name.
+#: includes/class-mozcheck-site-health-collector.php:191
+#, php-format
+msgid "%s is not active. Remove it if it is no longer needed."
+msgstr ""
+
+#: includes/class-mozcheck-site-health-collector.php:192
+msgid "An unused theme is installed"
+msgstr ""

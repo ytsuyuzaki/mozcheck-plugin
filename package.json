@@ -19,6 +19,10 @@
 	},
 	"files": [
 		"mozcheck.php",
+		"assets",
+		"includes",
+		"languages",
+		"uninstall.php",
 		"readme.txt"
 	],
 	"devDependencies": {
